@@ -4,15 +4,15 @@ package br.fundatec.lpi.exercicio3;
 public class Compra {
 
 	private String ds_codigo;
-	private Cliente cliente;
-	private Mesa mesa;
-	private Poltrona poltrona;
-	private Sofa sofa;
+	private Cliente ob_cliente;
+	private Mesa ob_mesa;
+	private Poltrona ob_poltrona;
+	private Sofa ob_sofa;
 	
 	public Compra(String ds_codigo, Cliente cliente) {
 		super();
 		this.ds_codigo = ds_codigo;
-		this.cliente = cliente;
+		this.ob_cliente = cliente;
 	}
 
 	public String getDs_codigo() {
@@ -20,31 +20,31 @@ public class Compra {
 	}
 
 	public Cliente getCliente() {
-		return cliente;
+		return ob_cliente;
 	}
 
 	public Mesa getMesa() {
-		return mesa;
+		return ob_mesa;
 	}
 
 	public void setMesa(Mesa mesa) {
-		this.mesa = mesa;
+		this.ob_mesa = mesa;
 	}
 
 	public Poltrona getPoltrona() {
-		return poltrona;
+		return ob_poltrona;
 	}
 
 	public void setPoltrona(Poltrona poltrona) {
-		this.poltrona = poltrona;
+		this.ob_poltrona = poltrona;
 	}
 
 	public Sofa getSofa() {
-		return sofa;
+		return ob_sofa;
 	}
 
 	public void setSofa(Sofa sofa) {
-		this.sofa = sofa;
+		this.ob_sofa = sofa;
 	}
 
 	
