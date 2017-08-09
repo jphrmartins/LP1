@@ -5,18 +5,18 @@ public class ConversorMorse {
 	private String mensagem;
 
 	public ConversorMorse(String mensagem) {
-		this.mensagem = mensagem;
-		converterMensagem();
-	}
-
-	public String getMensagem() {
-		return mensagem;
+		this.mensagem = mensagem.toUpperCase();
+		System.out.println(getMensagem());
 	}
 
 	// char letter = 'mensagem'.charAt(loop);
-	private void converterMensagem() {
-		this.mensagem = this.mensagem.toUpperCase();
+	private String getMensagem() {
 		String mensagemConvertida = "";
+		transformarMorse(mensagemConvertida);
+		return mensagem;
+	}
+
+	private void transformarMorse(String mensagemConvertida) {
 		for (int loop = 0; loop < this.mensagem.length(); loop++) {
 			char letter = this.mensagem.charAt(loop);
 			switch (letter) {
