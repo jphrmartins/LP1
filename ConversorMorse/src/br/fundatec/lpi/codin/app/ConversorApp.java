@@ -8,7 +8,9 @@ public class ConversorApp {
 	public static void main(String[] args) {
 		Scanner teclado = new Scanner(System.in);
 		System.out.print("Insira a mensagem para ser convertida: ");
-		new ConversorMorse(teclado.nextLine());
+		ConversorMorse conv = new ConversorMorse(teclado.nextLine());
+		System.out.println(conv.getMensagem());
+		
 	}
 
 }
