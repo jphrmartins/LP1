@@ -1,6 +1,5 @@
 package br.fundatec.lpi.execoesi;
 
-import org.omg.Messaging.SyncScopeHelper;
 
 public class Crediario {
 	private double nr_valorTotal;
@@ -10,6 +9,7 @@ public class Crediario {
 		super();
 		this.nr_valorTotal = nr_valorTotal;
 		this.nr_numParcelas = nr_numParcelas;
+		gerarParcelas();
 	}
 
 	public double getNr_valorTotal() {
@@ -20,15 +20,15 @@ public class Crediario {
 		return nr_numParcelas;
 	}
 
-	public double gerarParcelas() {
+	private void gerarParcelas() {
 		if(this.nr_numParcelas > 0) {
 			try {
 				double nr_valorParcelas = this.nr_valorTotal/this.nr_numParcelas;
-				return nr_valorParcelas;
+				System.out.println(nr_valorParcelas);
 			} catch (Exception e) {
 				System.out.println("Divisão por 0");
 			}
 		}
-		return 0;
+		
 	}
 }
