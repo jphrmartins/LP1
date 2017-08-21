@@ -59,9 +59,9 @@ public class Smartphone {
 	 */
 	public void switchAlarmMode(Dweller dweller) {
 		if (dweller.isBol_commitment()) {
-			setDs_alarme("ON");
+			dweller.getObj_smartphone().setDs_alarme("ON");
 		} else {
-			setDs_alarme("OFF");
+			dweller.getObj_smartphone().setDs_alarme("OFF");
 		}
 
 	}
